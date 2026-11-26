@@ -1,0 +1,18 @@
+{
+  "name": "npc-todo-mcp",
+  "version": "1.0.0",
+  "description": "Local stdio MCP bridge for Todo By NPC team tasks.",
+  "type": "module",
+  "bin": { "npc-todo-mcp": "npc-todo-mcp.mjs" },
+  "files": ["npc-todo-mcp.mjs"],
+  "engines": { "node": ">=22" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npcworkspace-cmyk/npc-todo-mcp.git"
+  },
+  "homepage": "https://npctodo.com/agent-guide",
+  "bugs": { "url": "https://github.com/npcworkspace-cmyk/npc-todo-mcp/issues" },
+  "keywords": ["mcp", "model-context-protocol", "todo", "task-management", "npc"],
+  "license": "MIT",
+  "dependencies": { "@modelcontextprotocol/sdk": "1.32.2" }
+}

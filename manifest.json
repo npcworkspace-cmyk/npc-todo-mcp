@@ -1,0 +1,42 @@
+{
+  "manifest_version": "0.3",
+  "name": "npc-todo-mcp",
+  "display_name": "Todo By NPC",
+  "version": "1.0.0",
+  "description": "Read team tasks and update their status and schedule in Todo By NPC.",
+  "author": {
+    "name": "NPC (Nuclear Power Creative)",
+    "url": "https://npctodo.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npcworkspace-cmyk/npc-todo-mcp"
+  },
+  "homepage": "https://npctodo.com/",
+  "documentation": "https://npctodo.com/agent-guide",
+  "server": {
+    "type": "node",
+    "entry_point": "npc-todo-mcp.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/npc-todo-mcp.mjs"],
+      "env": {
+        "NPC_TODO_TOKEN": "${user_config.npc_todo_token}"
+      }
+    }
+  },
+  "user_config": {
+    "npc_todo_token": {
+      "type": "string",
+      "title": "Todo By NPC API key",
+      "description": "Create a scoped key in Todo By NPC under Account settings → API & Agent access.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": {
+    "runtimes": {
+      "node": ">=22.0.0"
+    }
+  }
+}
